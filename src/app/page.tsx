@@ -4,6 +4,7 @@ import Intro from '@/sections/Intro';
 import Projects from "@/sections/Projects"
 import Testimonials from "@/sections/Testimonials"
 import FAQs from "@/sections/FAQs"
+import BoxGrid from "@/components/BoxGrid";
 
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
    <Intro/>
    <Projects/>
    <Testimonials/>
+   <BoxGrid />
+
    <FAQs/>
    </>
   );
