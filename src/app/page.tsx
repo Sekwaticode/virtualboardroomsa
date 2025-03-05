@@ -3,8 +3,9 @@ import Hero from '@/sections/Hero'
 import Intro from '@/sections/Intro';
 import Projects from "@/sections/Projects"
 import Testimonials from "@/sections/Testimonials"
-import FAQs from "@/sections/FAQs"
 import BoxGrid from "@/components/BoxGrid";
+import FAQs from "@/sections/FAQs"
+import Footer from "@/sections/Footer"
 
 
 export default function Home() {
@@ -16,8 +17,8 @@ export default function Home() {
    <Projects/>
    <Testimonials/>
    <BoxGrid />
-
    <FAQs/>
+   <Footer/>
    </>
   );
 }
