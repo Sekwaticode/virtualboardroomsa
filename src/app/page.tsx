@@ -1,7 +1,7 @@
 import Header from '@/sections/Header'
 import Hero from '@/sections/Hero'
 import Intro from '@/sections/Intro';
-import Projects from "@/sections/Projects"
+// import Projects from "@/sections/Projects"
 import Testimonials from "@/sections/Testimonials"
 import BoxGrid from "@/components/BoxGrid";
 import FAQs from "@/sections/FAQs"
@@ -14,7 +14,7 @@ export default function Home() {
    <Header/>
    <Hero/>
    <Intro/>
-   <Projects/>
+   {/* <Projects/> */}
    <Testimonials/>
    <BoxGrid />
    <FAQs/>
