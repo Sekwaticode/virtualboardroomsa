@@ -15,8 +15,8 @@ export default function Home() {
    <Hero/>
    <Intro/>
    {/* <Projects/> */}
-   <Testimonials/>
    <BoxGrid />
+   <Testimonials/>
    <FAQs/>
    <Footer/>
    </>

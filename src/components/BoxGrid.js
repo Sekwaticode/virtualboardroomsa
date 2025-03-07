@@ -8,6 +8,8 @@ const BoxGrid = () => {
     { title: "Title One", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
     { title: "Title Two", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
     { title: "Title Three", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
+    { title: "Title Four", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
+
   ];
 
   useEffect(() => {
