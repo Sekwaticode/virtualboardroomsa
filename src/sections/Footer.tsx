@@ -10,19 +10,23 @@ const navItems = [
     label: "Home",
   },
   {
-    href: "#",
-    label: "Projects",
+    href: "#about",
+    label: "About",
   },
   {
-    href: "#",
+    href: "#services",
+    label: "Services",
+  },
+  {
+    href: "#testimonials",
     label: "Testimonials",
   },
   {
-    href: "#",
+    href: "#faqs",
     label: "FAQS",
   },
   {
-    href: "#",
+    href: "#contact",
     label: "Contact",
   },
 ];
@@ -37,12 +41,12 @@ const Footer: FC = () => {
     }
   }, [inView, entranceAnimation]);
   return (
-    <footer className="bg-stone-900 text-white">
+    <footer className="bg-stone-900 text-white" id="footer">
       <div className="container">
         <div className="section"> </div>
         <div className="flex items-center gap-3">
           <div className="size-3 rounded-full bg-stone-400 animate-pulse"></div>
-          <span className="uppercase">One spot available for next month</span>
+          <span className="uppercase">Book Now! Available spots are limited</span>
         </div>
         <div className="grid md:grid-cols-3 ">
           <div className="md:col-span-2">
@@ -72,7 +76,8 @@ const Footer: FC = () => {
                 </svg>
               }
             >
-              info@alextaylor.com
+              073 096 5866
+
             </Button>
           </div>
           <div>
@@ -88,7 +93,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <p className="py-16 text-white-30 text-sm">
-          Copyright &copy; Alex Taylor &bull; All rights reserved
+          Copyright &copy; Virtual Boardroom SA &bull; All rights reserved
         </p>
       </div>
     </footer>
