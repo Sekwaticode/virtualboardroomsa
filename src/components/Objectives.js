@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./Objectives.module.css";
 // import heroImage from "@/assets/images/logo.png";
 
