@@ -6,8 +6,8 @@ import image2 from "@/assets/images/testimonial-2.jpg";
 import image3 from "@/assets/images/testimonial-3.jpg";
 import Testimonial from "@/components/Testimonial";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
-import SplitType from "split-type";
-import {useAnimate} from "motion/react"
+// import SplitType from "split-type";
+// import { useAnimate } from "motion/react";
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -52,11 +52,15 @@ const Testimonials: FC = () => {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
   const handleClickPrev = () => {
-    setTestimonialIndex((curr) => (curr === 0 ? testimonials.length - 1 : curr - 1));
+    setTestimonialIndex((curr) =>
+      curr === 0 ? testimonials.length - 1 : curr - 1
+    );
   };
 
   const handleClickNext = () => {
-    setTestimonialIndex((curr) => (curr === testimonials.length - 1 ? 0 : curr + 1));
+    setTestimonialIndex((curr) =>
+      curr === testimonials.length - 1 ? 0 : curr + 1
+    );
   };
 
   return (
@@ -66,10 +70,13 @@ const Testimonials: FC = () => {
         ref={titleRef}
       >
         <motion.span className="whitespace-nowrap" style={{ x: transformTop }}>
-          Some nice words from my previous clients
+          Some Kind Words from Our Valued Clients
         </motion.span>
-        <motion.span className="whitespace-nowrap self-end text-red-orange-500" style={{ x: transformBottom }}>
-          Some nice words from my previous clients
+        <motion.span
+          className="whitespace-nowrap self-end text-stone-500"
+          style={{ x: transformBottom }}
+        >
+         Some Kind Words from Our Valued Clients
         </motion.span>
       </h2>
 
@@ -97,7 +104,7 @@ const Testimonials: FC = () => {
 
         <div className="flex gap-4 mt-6 lg:mt-10">
           <button
-            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full"
+            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-stone-500 hover:text-white hover:border-stone-500 transition-all duration-300"
             onClick={handleClickPrev}
           >
             <svg
@@ -108,12 +115,16 @@ const Testimonials: FC = () => {
               stroke="currentColor"
               className="size-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
             </svg>
           </button>
 
           <button
-            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full"
+            className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-stone-500 hover:text-white hover:border-stone-500 transition-all duration-300"
             onClick={handleClickNext}
           >
             <svg
@@ -124,7 +135,11 @@ const Testimonials: FC = () => {
               stroke="currentColor"
               className="size-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
             </svg>
           </button>
         </div>

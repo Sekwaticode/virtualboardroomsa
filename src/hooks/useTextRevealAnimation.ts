@@ -17,13 +17,24 @@ const useTextRevealAnimation = () => {
         transform: 'translateY(0)'
     },{
         duration: .5,
-        delay: stagger(0.1)
+        delay: stagger(0.01)
     })
+  }
+
+  const quoteExitAnimation = () =>{
+    return animate(scope.current.querySelectorAll('.word'),{
+  transform: 'translateY(100%)'},{
+    duration: .03,
+    delay: stagger(-0.25, {
+      //  startDelay: scope.current.querySelectorAll('.word').length * 0.25
+    })
+  })
   }
 
   return {
     scope,
-    entranceAnimation
+    entranceAnimation,
+    quoteExitAnimation
 }
 };
 

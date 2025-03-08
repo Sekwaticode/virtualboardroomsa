@@ -10,22 +10,25 @@ const Intro: FC = () => {
     once: true,
   });
 
-  useEffect(()=>{
+  useEffect(() => {
     new SplitType(scope.current.querySelector("h2"), {
       types: "lines,words",
       tagName: "span",
     });
-  },[scope])
+  }, [scope]);
 
   useEffect(() => {
     if (inView) {
-    animate(scope.current.querySelectorAll(".word"),{
-      transform: "translateY(0%)",
-    },
-  {
-    duration: 0.5,
-    delay: stagger(0.2)
-  })
+      animate(
+        scope.current.querySelectorAll(".word"),
+        {
+          transform: "translateY(0%)",
+        },
+        {
+          duration: 0.5,
+          delay: stagger(0.2),
+        }
+      );
     }
   }, [inView, animate, scope]);
 
@@ -33,8 +36,7 @@ const Intro: FC = () => {
     <section id="intro" className="section mt-12 md:mt-16 lg:mt-20" ref={scope}>
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%]">
-          Building beautiful websites with clean code with clean code and
-          thoughtful design to help your business grow and standout online
+        Convenience never stands in the way of my integrity
         </h2>
       </div>
     </section>

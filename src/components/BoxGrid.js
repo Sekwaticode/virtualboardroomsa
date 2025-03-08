@@ -7,12 +7,70 @@ const BoxGrid = () => {
   const boxRefs = useRef([]);
 
   const boxes = [
-    { title: "Title One", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
-    { title: "Title Two", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
-    { title: "Title Three", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
-    { title: "Title Four", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
-    { title: "Title Five", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
-    { title: "Title Six", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quae?" },
+    {
+      title: "Virtual Assistance",
+      content: [
+        "Calendar Management",
+        "Scheduling Appointments",
+        "Filing",
+        "Research & Assignments",
+        "Email Marketing",
+        "Speech and Presentation Prep",
+        "Project Management",
+        "Research",
+        "Administrative Tasks",
+        "Market Research and Product Research",
+        "Presentations",
+      ],
+    },
+    {
+      title: "Personal & Business Finance",
+      content: [
+        "Budgeting",
+        "Variance Analysis",
+        "Personal Finance Pack",
+        "Managing Payments",
+        "Invoicing",
+        "Ordering Supplies",
+      ],
+    },
+    {
+      title: "Recruitment Pack",
+      content: [
+        "Resume Writing",
+        "Cover Letter",
+        "Profile/BIO",
+        "LinkedIn Setup & Management",
+        "Interview Preps",
+        "Job Applications",
+      ],
+    },
+    {
+      title: "Branding & IT",
+      content: [
+        "Web Development",
+        "Branding - Corporate Stationery & Uniform",
+        "Company Logo",
+        "Business Cards",
+        "Email Signature and Letterhead",
+        "Email Management",
+        "Company Profile",
+        "Business Proposals",
+      ],
+    },
+    {
+      title: "Travel Management",
+      content: ["Travel Arrangements", "Guest Communication", "Bookings Management"],
+    },
+    {
+      title: "Social Media Management",
+      content: ["Content Creation", "Sponsored Ads", "Blog Writing & Editing"],
+    },
+    { title: "Mentorship", content: ["Career Workshops"] },
+    {
+      title: "Events Management",
+      content: ["Corporate Events", "Product Launches", "Fundraising"],
+    },
   ];
 
   useEffect(() => {
@@ -32,15 +90,20 @@ const BoxGrid = () => {
       if (box) {
         const moveHandler = (e) => handleMouseMove(e, box);
         box.addEventListener("mousemove", moveHandler);
-
-        // Cleanup function
-        return () => box.removeEventListener("mousemove", moveHandler);
       }
     });
+
+    return () => {
+      boxRefs.current.forEach((box) => {
+        if (box) {
+          box.removeEventListener("mousemove", handleMouseMove);
+        }
+      });
+    };
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="services">
       {boxes.map((box, index) => (
         <div
           key={index}
@@ -48,8 +111,12 @@ const BoxGrid = () => {
           className={`${styles.box} box`}
         >
           <div className={styles.content}>
-            <h2>{box.title}</h2>
-            <p>{box.content}</p>
+            <h2 className="text-2xl font-bold mb-2">{box.title}</h2>
+            <ul className="list-disc pl-5">
+              {box.content.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
           </div>
           <span></span>
         </div>

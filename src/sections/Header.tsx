@@ -2,13 +2,16 @@
 
 import { FC, useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
+import Button from "@/components/Button";
 
 const navItems = [
   { label: "About", href: "#intro" },
-  { label: "Selected Works", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQs", href: "#faqs" },
   { label: "Contact", href: "#contact" },
+  { label: "Footer", href: "#footer" },
+
 ];
 
 const Header: FC = () => {
@@ -83,63 +86,51 @@ const Header: FC = () => {
       </motion.div>
 
       {/* Top Navigation */}
-      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md">
-        <div className="flex justify-between items-center h-20 px-6">
-          {/* Logo */}
-          <a href="/">
-            <span className="text-xl font-bold uppercase text-white">
-              Alex&nbsp;Taylor
-            </span>
-          </a>
+      <div className="fixed top-0 backdrop-blur left-0 w-full bg-stone-900/50 mix-blend-difference backdrop-blur-lg">
+  <div className="flex justify-between items-center h-20 px-6">
+    {/* Logo */}
+    <a href="/">
+      <span className="text-xl font-bold uppercase text-white">
+        Virtual&nbsp;Boardroom&nbsp;SA
+      </span>
+    </a>
 
-          {/* Menu Button */}
-          <div
-            className="size-11 border border-stone-400 rounded-full flex items-center justify-center bg-stone-200 cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.rect
-                x="3"
-                y="7"
-                width="18"
-                height="2"
-                fill="currentColor"
-                animate={{
-                  translateY: isOpen ? 4 : 0,
-                  rotate: isOpen ? 45 : 0,
-                }}
-                transition={{ duration: 0.2 }}
-                style={{ transformOrigin: "12px 8px" }}
-              />
-              <motion.rect
-                x="3"
-                y="15"
-                width="18"
-                height="2"
-                fill="currentColor"
-                animate={{
-                  translateY: isOpen ? -4 : 0,
-                  rotate: isOpen ? -45 : 0,
-                }}
-                transition={{ duration: 0.2 }}
-                style={{ transformOrigin: "12px 16px" }}
-              />
-            </svg>
-            {/* <Button
-              variant="primary"
-              className="hidden md:inline-flex items-center"
-            >
-              Contact Me
-            </Button> */}
-          </div>
-        </div>
+    {/* Menu Button */}
+    <div className="flex items-center gap-4">
+      <div
+        className="size-11 border border-stone-400 rounded-full flex items-center justify-center bg-stone-200 cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <motion.rect
+            x="3"
+            y="7"
+            width="18"
+            height="2"
+            fill="currentColor"
+            animate={{ translateY: isOpen ? 4 : 0, rotate: isOpen ? 45 : 0 }}
+            transition={{ duration: 0.2 }}
+            style={{ transformOrigin: "12px 8px" }}
+          />
+          <motion.rect
+            x="3"
+            y="15"
+            width="18"
+            height="2"
+            fill="currentColor"
+            animate={{ translateY: isOpen ? -4 : 0, rotate: isOpen ? -45 : 0 }}
+            transition={{ duration: 0.2 }}
+            style={{ transformOrigin: "12px 16px" }}
+          />
+        </svg>
       </div>
+      <Button variant="primary" className="hidden md:inline-flex items-center">
+        Contact Me
+      </Button>
+    </div>
+  </div>
+</div>
+
     </header>
   );
 };

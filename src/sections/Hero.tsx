@@ -1,6 +1,6 @@
 "use client";
 import { FC, useEffect, useRef } from "react";
-import heroImage from "@/assets/images/hero-image.jpg";
+import heroImage from "@/assets/images/logo.png";
 import Image from "next/image";
 import Button from "@/components/Button";
 import splitType from "split-type";
@@ -22,11 +22,7 @@ const Hero: FC = () => {
     offset: ["start end", "end end"],
   });
 
-  const portraitWidth = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["40%", "240%"]
-  );
+  const portraitWidth = useTransform(scrollYProgress, [0, 1], ["40%", "240%"]);
 
   useEffect(() => {
     if (titleScope.current) {
@@ -61,7 +57,7 @@ const Hero: FC = () => {
               className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0"
               ref={titleScope}
             >
-              Crafting digital experiences through code and creative design
+              Comprehensive Virtual Solutions for Business Success{" "}
             </motion.h1>
             <div className="flex flex-col md:flex-row md:items-center items-start mt-10 gap-6">
               <motion.div
@@ -106,7 +102,7 @@ const Hero: FC = () => {
                     </div>
                   }
                 >
-                  <span>View My Work</span>
+                  <span>View Our Services</span>
                 </Button>
               </motion.div>
               <motion.div
