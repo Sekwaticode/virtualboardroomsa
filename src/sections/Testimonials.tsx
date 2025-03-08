@@ -1,41 +1,41 @@
 "use client";
 
 import { FC, useRef, useState } from "react";
-import image1 from "@/assets/images/testimonial-1.jpg";
-import image2 from "@/assets/images/testimonial-2.jpg";
-import image3 from "@/assets/images/testimonial-3.jpg";
+import image1 from "@/assets/images/testimonial-5.jpg";
+import image2 from "@/assets/images/testimonial-6.jpg";
+// import image3 from "@/assets/images/testimonial-3.jpg";
 import Testimonial from "@/components/Testimonial";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
 // import SplitType from "split-type";
 // import { useAnimate } from "motion/react";
 const testimonials = [
   {
-    name: "Sarah Chen",
-    company: "Pixel Perfect",
-    role: "Head of Design",
+    name: "Gabriel Petrescu",
+    company: "OrgXo",
+    role: "Founder & Chief Serendipity Officer",
     quote:
-      "Alex's expertise in both technical development and design created a beautiful, high-performing website.",
+      "The Team at Virtual Boardroom SA delivered all their services meticulously, increasing our companies online presence in a positive and favorable light.",
     image: image1,
     imagePositionY: 0.2,
   },
   {
-    name: "Marcus Rodriguez",
-    company: "Craft Coffee Co.",
-    role: "Founder",
+    name: "Lebogang Sekwati",
+    company: "Sekwaticode",
+    role: "Web Developer",
     quote:
-      "Alex transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality.",
+      "Working alongside Virtual Boardroom SA has been a pleasure. The Team is kind, attentive, patient and the business advice they shared is extremely valuable to me and my company.",
     image: image2,
     imagePositionY: 0.1,
   },
-  {
-    name: "Emily Watson",
-    company: "Studio Minimal",
-    role: "Creative Director",
-    quote:
-      "The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.",
-    image: image3,
-    imagePositionY: 0.55,
-  },
+  // {
+  //   name: "Emily Watson",
+  //   company: "Studio Minimal",
+  //   role: "Creative Director",
+  //   quote:
+  //     "The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.",
+  //   image: image3,
+  //   imagePositionY: 0.55,
+  // },
 ];
 
 const Testimonials: FC = () => {

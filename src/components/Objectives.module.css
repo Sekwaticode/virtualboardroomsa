@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    min-height: 100vh;
+    background: 20 5.9% 90%;
+    
+}
+
+.container .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(-50px);
+    /* Adjusted for smoother effect */
+    opacity: 0;
+    /* Completely hidden */
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none;
+    /* Prevent interaction when hidden */
+}
+
+.container .card:hover .face.face1 {
+   opacity: 1;               /* Make it visible on hover */
+}
+
+.container .card .face.face1 .content {
+    opacity: 0.2;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img {
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3 {
+    /* Fixed selector */
+    margin: 10px 0 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-50px);
+    /* Adjusted for smoother effect */
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face2 .content p {
+    color: #ff0057;
+    /* Example hover effect */
+}
