@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useEffect, useRef } from "react";
 import styles from "./BoxGrid.module.css";
@@ -86,7 +86,10 @@ const BoxGrid = () => {
       }
     };
 
-    boxRefs.current.forEach((box) => {
+    // Make a copy of the refs inside the effect
+    const boxRefsCopy = boxRefs.current;
+
+    boxRefsCopy.forEach((box) => {
       if (box) {
         const moveHandler = (e) => handleMouseMove(e, box);
         box.addEventListener("mousemove", moveHandler);
@@ -94,7 +97,7 @@ const BoxGrid = () => {
     });
 
     return () => {
-      boxRefs.current.forEach((box) => {
+      boxRefsCopy.forEach((box) => {
         if (box) {
           box.removeEventListener("mousemove", handleMouseMove);
         }
