@@ -26,10 +26,12 @@ const Hero: FC = () => {
 
   useEffect(() => {
     if (titleScope.current) {
+      // eslint-disable-next-line no-unused-vars
       const splitText = new splitType(titleScope.current, {
         types: "lines,words",
         tagName: "span",
       });
+      console.log(splitText.words); // Access the split words
 
       titleAnimate(
         titleScope.current.querySelectorAll(".word"),
@@ -38,9 +40,10 @@ const Hero: FC = () => {
           duration: 0.5,
           delay: stagger(0.2),
         }
+      
       );
     }
-  }, [titleScope, titleAnimate]);
+  }, [titleScope, titleAnimate, ]);
 
   return (
     <section ref={scrollingDiv} className="relative">
@@ -128,7 +131,6 @@ const Hero: FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Spacer div for scroll effect */}
       <div className="h-[200vh]"></div>
     </section>
