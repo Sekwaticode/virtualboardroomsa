@@ -54,7 +54,7 @@ const Footer: FC = () => {
               className="text-4xl md:text-7xl lg:text-8xl mt-8 font-extralight"
               ref={scope}
             >
-              Enough talk. Let&apos;s make something great together
+              Enough talk. Let&apos;s collaborate and turn visionary ideas into impactful solutions
             </h2>
             <Button
               variant="secondary"

@@ -56,13 +56,16 @@
 
 .textBox {
     padding: 20px 30px;
-    background: #fff;
+    background: #000;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
-
+    
 }
 
+.textBox .h2, .textBox .p {
+color: #fff;
+}
 .leftContainer {
     left: 0;
 }
@@ -93,7 +96,7 @@
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 6s linear forwards;
+    /* animation: moveline 6s linear forwards; */
 }
 
 @keyframes moveline {
@@ -125,8 +128,9 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid #000;
     right: -15px;
+
 }
 
 .rightArrow {
@@ -137,7 +141,7 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid #000;
     left: -15px;
 }
 
