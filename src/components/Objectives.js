@@ -5,12 +5,15 @@ import styles from "./Objectives.module.css";
 const Objectives = () => {
     return (
         <div className="">
+            <h1
+                className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 justify-center"
+                F              > Mission, Vision, Values</h1>
             <div className={styles.container}>
                 <div className={styles.card}>
                     <div className={`${styles.face} ${styles.face1}`}>
                         <div className={styles.content}>
                             {/* <h3>Mission</h3> */}
-                            <p>Our mission is to support organisations
+                            <p>Our mission is to support organizations
                                 and professionals to leverage their full
                                 potential and unlock their growth and
                                 development.
@@ -58,6 +61,52 @@ const Objectives = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <h1
+                className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 justify-center"
+                F              > Goals and Objectives</h1>
+            <div className={styles.container}>
+                <div className={styles.card}>
+                    <div className={`${styles.face} ${styles.face1}`}>
+                        <div className={styles.content}>
+                            {/* <h3>Mission</h3> */}
+                            <p>We are centred in growing long
+                                lasting client relationships
+                                through research, identifying
+                                and launching additional
+                                services aligned with our current
+                                and potential clients
+                            </p>
+                        </div>
+                    </div>
+                    <div className={`${styles.face} ${styles.face2}`}>
+                        <div className={styles.content}>
+                            <h3>Growth</h3>
+                            {/* <p>More info about the design...</p> */}
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.card}>
+                    <div className={`${styles.face} ${styles.face1}`}>
+                        <div className={styles.content}>
+                            {/* <h3>Vision</h3> */}
+                            <p>We improve loyalty and build
+                                social proof by ensuring that
+                                clients’ needs, preferences, and
+                                expectations are met.
+                            </p>
+                        </div>
+                    </div>
+                    <div className={`${styles.face} ${styles.face2}`}>
+                        <div className={styles.content}>
+                            <h3>Client Satisfaction</h3>
+                            {/* <p>More info about the code...</p> */}
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     );
