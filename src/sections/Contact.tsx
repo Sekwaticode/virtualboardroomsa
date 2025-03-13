@@ -1,111 +1,123 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import contactImage from "@/assets/images/contact_image.png";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    mobile: "",
+    service: "",
+    note: "",
   });
 
-  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const validate = () => {
-    const newErrors: { name?: string; email?: string; message?: string } = {};
-
-    if (!formData.name.trim()) newErrors.name = "Name is required.";
-    if (!formData.email.trim() || !/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(formData.email))
-      newErrors.email = "Valid email is required.";
-    if (!formData.message.trim()) newErrors.message = "Message cannot be empty.";
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Form submitted:", formData);
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
-      setFormData({ name: "", email: "", message: "" });
-    }
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white shadow-lg rounded-xl p-8 max-w-lg w-full"
-      >
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Contact Us</h2>
-        
-        {submitted && (
-          <p className="text-green-600 text-center mb-4">Thank you! Your message has been sent.</p>
-        )}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Input */}
-          <div>
-            <label className="block text-gray-700 font-medium">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your name"
+    <section id="contacts" className="my-10">
+      <div className="container mx-auto px-4 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+          {/* Left Image Section */}
+          <div className="relative min-h-[400px]">
+            <Image
+              src={contactImage}
+              alt="Gallery"
+              className="absolute inset-0 w-full h-full object-cover"
             />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </div>
 
-          {/* Email Input */}
-          <div>
-            <label className="block text-gray-700 font-medium">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-            />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-          </div>
+          {/* Right Contact Form Section */}
+          <div className="p-6 lg:p-10 flex flex-col justify-center">
+            <h6 className="text-stone-900 font-semibold">Free Quote</h6>
+            <h1 className="text-2xl font-bold mb-4">Get A Free Quote</h1>
+            <p className="mb-6 text-gray-600">
+              Get in touch with Virtual Boardroom SA for expert business solutions! Our team is
+              ready to help you achieve organizational success!
+            </p>
 
-          {/* Message Input */}
-          <div>
-            <label className="block text-gray-700 font-medium">Message</label>
-            <textarea
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your message"
-            />
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-          </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md focus:ring-2 focus:ring-stone-900"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md focus:ring-2 focus:ring-stone-900"
+                  placeholder="Your Email"
+                  required
+                />
+                <input
+                  type="text"
+                  name="mobile"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md focus:ring-2 focus:ring-stone-900"
+                  placeholder="Your Mobile"
+                  required
+                />
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md focus:ring-2 focus:ring-stone-900"
+                  required
+                >
+                  <option value="">Select A Service</option>
+                  <option value="Virtual Assistance">Virtual Assistance</option>
+                  <option value="Personal & Business Finance">
+                    Personal & Business Finance
+                  </option>
+                  <option value="Recruitment Pack">Recruitment Pack</option>
+                  <option value="Branding & IT">Branding & IT</option>
+                  <option value="Travel Management">Travel Management</option>
+                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="Mentorship">Mentorship</option>
+                  <option value="Events Management">Events Management</option>
+                </select>
+              </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-stone-900 text-white p-3 rounded-lg hover:bg-stone-600 transition duration-300"
-          >
-            Send Message
-          </button>
-        </form>
-      </motion.div>
-    </div>
+              <textarea
+                name="note"
+                value={formData.note}
+                onChange={handleChange}
+                className="w-full p-3 border rounded-md focus:ring-2 focus:ring-stone-900"
+                placeholder="Message"
+                rows={4}
+              ></textarea>
+
+              <button
+                type="submit"
+                className="w-full bg-stone-900 text-white font-medium py-3 rounded-md hover:bg-stone-700 transition duration-300"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
