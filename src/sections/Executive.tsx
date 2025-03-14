@@ -63,7 +63,7 @@ const ExecutiveSection = () => {
           <Image
             src={executiveImage}
             alt="Executive Image"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg relative"
           />
         </motion.div>
       </div>

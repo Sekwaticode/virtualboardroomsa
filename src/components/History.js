@@ -46,51 +46,50 @@ const timelineData = [
 const History = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true });
-
   return (
-    <div className=" py-20 justify-center">
-      <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Goals and Objectives</h1>
-
-      <div ref={containerRef} className="relative max-w-4xl w-full px-4">
+    <div className="flex flex-col items-center justify-center py-2">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center">
+        Company History Overview
+      </h1>
+  
+      <div ref={containerRef} className="relative max-w-4xl w-full px-4 mx-auto">
         {/* Timeline Line */}
         <div className="absolute top-0 left-1/2 w-1 h-full bg-black -translate-x-1/2"></div>
-
+  
         {/* Timeline Items */}
-        {timelineData.map((item, index) => {
-          return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: item.position === "left" ? -200 : 200 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.9, delay: index * 0.3, ease: "easeOut" }}
-              className={`relative flex ${item.position === "left" ? "justify-start" : "justify-end"
-                } my-6`}
-            >
-              {/* Timeline Box */}
-              <div className="relative w-1/2 bg-black p-6 rounded-lg shadow-lg">
-                <h2 className="text-xl text-white font-semibold">{item.title}</h2>
-                <small className="block text-stone-200 mb-2">{item.year}</small>
-                <p className="text-stone-200">{item.text}</p>
-
-                {/* Arrow */}
-                <div
-                  className={`absolute top-6 ${item.position === "left"
-                      ? "right-[-15px] border-l-black"
-                      : "left-[-15px] border-r-black"
-                    } border-t-transparent border-b-transparent border-solid border-[15px]`}
-                ></div>
-              </div>
-
-              {/* Timeline Dot */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-black w-10 h-10 rounded-full flex items-center justify-center shadow-md">
-                <Image src={logo} alt="Company Logo" className="w-8 h-8 rounded-full" />
-              </div>
-            </motion.div>
-          );
-        })}
+        {timelineData.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: item.position === "left" ? -200 : 200 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9, delay: index * 0.3, ease: "easeOut" }}
+            className={`relative flex ${item.position === "left" ? "justify-start" : "justify-end"} my-6`}
+          >
+            {/* Timeline Box */}
+            <div className="relative w-1/2 bg-black p-6 rounded-lg shadow-lg">
+              <h2 className="text-xl text-white font-semibold">{item.title}</h2>
+              <small className="block text-stone-200 mb-2">{item.year}</small>
+              <p className="text-stone-200">{item.text}</p>
+  
+              {/* Arrow */}
+              <div
+                className={`absolute top-6 ${item.position === "left"
+                  ? "right-[-15px] border-l-black"
+                  : "left-[-15px] border-r-black"
+                } border-t-transparent border-b-transparent border-solid border-[15px]`}
+              ></div>
+            </div>
+  
+            {/* Timeline Dot */}
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-black w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+              <Image src={logo} alt="Company Logo" className="w-8 h-8 rounded-full" />
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
+  
 };
 
 export default History;
