@@ -3,7 +3,7 @@ import Hero from "@/sections/Hero";
 import Intro from "@/sections/Intro";
 import Objectives from "@/components/Objectives";
 import Testimonials from "@/sections/Testimonials";
-import BoxGrid from "@/components/BoxGrid";
+import Services from "@/components/Services";
 import CompanyHistory from "@/components/History";
 import Executive from "@/sections/Executive"
 import FAQs from "@/sections/FAQs";
@@ -19,7 +19,7 @@ export default function Home() {
       <Intro />
       <Objectives />
       <CompanyHistory/>
-      <BoxGrid />
+      <Services />
       <Testimonials />
       <Contact/>
       <FAQs />

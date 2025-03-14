@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useEffect, useRef } from "react";
-import styles from "./BoxGrid.module.css";
+import styles from "./Services.module.css";
 
-const BoxGrid = () => {
+const Services = () => {
   const boxRefs = useRef([]);
 
   const boxes = [
@@ -106,7 +106,9 @@ const BoxGrid = () => {
   }, []);
 
   return (
-    <div className={styles.container} id="services">
+    <div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Our Expert Services</h1>
+            <div className={styles.container} id="services">
       {boxes.map((box, index) => (
         <div
           key={index}
@@ -125,7 +127,8 @@ const BoxGrid = () => {
         </div>
       ))}
     </div>
+    </div>
   );
 };
 
-export default BoxGrid;
+export default Services;

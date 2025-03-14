@@ -5,9 +5,7 @@ import styles from "./Objectives.module.css";
 const Objectives = () => {
     return (
         <div className="">
-            <h1
-                className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 justify-center"
-                F              > Mission, Vision, Values</h1>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center"> Mission, Vision, Values</h1>
             <div className={styles.container}>
                 <div className={styles.card}>
                     <div className={`${styles.face} ${styles.face1}`}>
@@ -62,9 +60,7 @@ const Objectives = () => {
                     </div>
                 </div>
             </div>
-            <h1
-                className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 justify-center"
-                F              > Goals and Objectives</h1>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Goals and Objectives</h1>
             <div className={styles.container}>
                 <div className={styles.card}>
                     <div className={`${styles.face} ${styles.face1}`}>

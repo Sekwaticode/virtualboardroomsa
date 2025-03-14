@@ -48,7 +48,9 @@ const History = () => {
   const isInView = useInView(containerRef, { once: true });
 
   return (
-    <div className=" py-20 flex justify-center">
+    <div className=" py-20 justify-center">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Goals and Objectives</h1>
+
       <div ref={containerRef} className="relative max-w-4xl w-full px-4">
         {/* Timeline Line */}
         <div className="absolute top-0 left-1/2 w-1 h-full bg-black -translate-x-1/2"></div>
@@ -61,9 +63,8 @@ const History = () => {
               initial={{ opacity: 0, x: item.position === "left" ? -200 : 200 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.9, delay: index * 0.3, ease: "easeOut" }}
-              className={`relative flex ${
-                item.position === "left" ? "justify-start" : "justify-end"
-              } my-6`}
+              className={`relative flex ${item.position === "left" ? "justify-start" : "justify-end"
+                } my-6`}
             >
               {/* Timeline Box */}
               <div className="relative w-1/2 bg-black p-6 rounded-lg shadow-lg">
@@ -73,11 +74,10 @@ const History = () => {
 
                 {/* Arrow */}
                 <div
-                  className={`absolute top-6 ${
-                    item.position === "left"
+                  className={`absolute top-6 ${item.position === "left"
                       ? "right-[-15px] border-l-black"
                       : "left-[-15px] border-r-black"
-                  } border-t-transparent border-b-transparent border-solid border-[15px]`}
+                    } border-t-transparent border-b-transparent border-solid border-[15px]`}
                 ></div>
               </div>
 

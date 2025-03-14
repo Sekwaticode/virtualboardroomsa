@@ -34,8 +34,8 @@ const ContactForm = () => {
           <div className="relative min-h-[400px]">
             <Image
               src={contactImage}
-              alt="Gallery"
-              className="absolute inset-0 w-full h-full object-cover"
+              alt="executive_profile"
+              className="absolute inset-0 w-full h-full object-cover relative"
             />
           </div>
 
@@ -44,8 +44,9 @@ const ContactForm = () => {
             <h6 className="text-stone-900 font-semibold">Free Quote</h6>
             <h1 className="text-2xl font-bold mb-4">Get A Free Quote</h1>
             <p className="mb-6 text-gray-600">
-              Get in touch with Virtual Boardroom SA for expert business solutions! Our team is
-              ready to help you achieve organizational success!
+              Get in touch with Virtual Boardroom SA for expert business
+              solutions! Our team is ready to help you achieve organizational
+              success!
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -92,7 +93,9 @@ const ContactForm = () => {
                   <option value="Recruitment Pack">Recruitment Pack</option>
                   <option value="Branding & IT">Branding & IT</option>
                   <option value="Travel Management">Travel Management</option>
-                  <option value="Social Media Management">Social Media Management</option>
+                  <option value="Social Media Management">
+                    Social Media Management
+                  </option>
                   <option value="Mentorship">Mentorship</option>
                   <option value="Events Management">Events Management</option>
                 </select>
