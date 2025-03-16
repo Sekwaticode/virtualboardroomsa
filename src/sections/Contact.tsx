@@ -41,7 +41,6 @@ const ContactForm = () => {
 
           {/* Right Contact Form Section */}
           <div className="p-6 lg:p-10 flex flex-col justify-center">
-            <h6 className="text-stone-900 font-semibold">Free Quote</h6>
             <h1 className="text-2xl font-bold mb-4">Get A Free Quote</h1>
             <p className="mb-6 text-gray-600">
               Get in touch with Virtual Boardroom SA for expert business
