@@ -25,14 +25,12 @@ export const LogoTicker = () => {
             <p>MOTIVATIONAL & KEY-NOTE SPEAKER</p>
             <p>CO-FOUNDER & HOST OF THE PMBF CAREER PROGRAMME</p>
             <p> PERSONAL FINANCE COACH </p>
-            <p> FINANCE COACH</p>
             <p>FOUNDER & EO OF THE VIRTUAL BOARDROOM SA</p>
             <p>SEASONED FINANCE PROFESSIONAL</p>
             <p>INDEPENDENT NON-EXECUTIVE DIRECTOR</p>
             <p>MOTIVATIONAL & KEY-NOTE SPEAKER</p>
             <p>CO-FOUNDER & HOST OF THE PMBF CAREER PROGRAMME</p>
             <p> PERSONAL FINANCE COACH </p>
-            <p> FINANCE COACH</p>
             <p>FOUNDER & EO OF THE VIRTUAL BOARDROOM SA</p>
              
           </motion.div>
