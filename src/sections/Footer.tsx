@@ -35,6 +35,19 @@ const Footer: FC = () => {
   const { scope, entranceAnimation } = useTextRevealAnimation();
   const inView = useInView(scope);
 
+  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const url = new URL(e.currentTarget.href);
+    const hash = url.hash;
+    setTimeout(() => {
+      const target = document.querySelector(hash);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+
+
+  };
   useEffect(() => {
     if (inView) {
       entranceAnimation();
@@ -59,6 +72,8 @@ const Footer: FC = () => {
               Enough talk. Let&apos;s collaborate and turn visionary ideas into
               impactful solutions
             </h2>
+            <a href="https://api.whatsapp.com/send/?phone=27730965866&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+
             <Button
               variant="secondary"
               className="mt-8"
@@ -81,11 +96,13 @@ const Footer: FC = () => {
             >
               073 096 5866
             </Button>
+            </a>
           </div>
           <div>
             <nav className="flex flex-col md:items-end gap-8 mt-16 md:mt-0">
               {navItems.map(({ href, label }) => (
-                <a href={href} key={label}>
+                <a href={href} key={label}               onClick={handleClickMobileNavItem}
+>
                   <Button variant="text" className="text-lg">
                     {label}
                   </Button>
