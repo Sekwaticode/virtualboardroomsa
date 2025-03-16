@@ -2,7 +2,7 @@ import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Intro from "@/sections/Intro";
 import Objectives from "@/components/Objectives";
-import Testimonials from "@/sections/Testimonials";
+// import Testimonials from "@/sections/Testimonials";
 import Services from "@/components/Services";
 import CompanyHistory from "@/components/History";
 import Executive from "@/sections/Executive"
@@ -20,7 +20,7 @@ export default function Home() {
       <Objectives />
       <CompanyHistory/>
       <Services />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact/>
       <FAQs />
       <Footer />

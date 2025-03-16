@@ -21,11 +21,6 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <section id="contacts" className="my-10">
       <div className="container mx-auto px-4 lg:px-0">
@@ -48,8 +43,12 @@ const ContactForm = () => {
               success!
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form  className="space-y-4" action="https://api.web3forms.com/submit" method="POST">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+             
+              <input type="hidden" name="access_key" value="57e61543-3fbc-4093-9069-33b6321f355b"/>
+
+
                 <input
                   type="text"
                   name="name"

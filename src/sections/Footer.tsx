@@ -56,7 +56,6 @@ const Footer: FC = () => {
   return (
     <footer className="bg-black text-white" id="footer">
       <div className="container">
-        <div className="section"> </div>
         <div className="flex items-center gap-3">
           <div className="size-3 rounded-full bg-stone-400 animate-pulse"></div>
           <span className="uppercase">
