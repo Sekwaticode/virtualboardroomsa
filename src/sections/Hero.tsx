@@ -46,7 +46,7 @@ const Hero: FC = () => {
   }, [titleScope, titleAnimate, ]);
 
   return (
-    <section ref={scrollingDiv} className="relative">
+    <section id="Home"ref={scrollingDiv} className="relative">
       {/* Main content with grid layout */}
       <div
         className="grid md:grid-cols-12 md:h-screen items-stretch sticky top-0"

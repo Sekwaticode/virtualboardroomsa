@@ -6,7 +6,7 @@ import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 import { useInView } from "motion/react";
 const navItems = [
   {
-    href: "#",
+    href: "#Home",
     label: "Home",
   },
   {
