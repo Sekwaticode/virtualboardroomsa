@@ -3,22 +3,27 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import executiveImage from "@/assets/images/executive_vbsa.png";
+import { LogoTicker } from "@/sections/LogoTicker";
 
 const ExecutiveSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="bg-stone-200 min-h-screen flex flex-col items-center py-10 px-4">
+    <div
+      id="about"
+      className="bg-stone-200 min-h-screen flex flex-col items-center py-10 px-4"
+    >
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-4xl font-bold text-black relative pb-2">
           Meet Our Executive
           <span className="block w-20 h-1 bg-stone-500 mx-auto mt-2"></span>
         </h1>
+        <LogoTicker />
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-wrap md:flex-nowrap justify-between items-center gap-10 max-w-5xl mt-10">
+      <div className="flex flex-wrap md:flex-nowrap justify-between items-start gap-10 max-w-5xl mt-10">
         {/* Text Section (Always Left) */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -30,21 +35,19 @@ const ExecutiveSection = () => {
             Introducing Mmalethabo Mahlangu
           </h2>
           <p className="text-lg leading-relaxed">
-            Mmalethabo studied BCom Accounting at the University of Johannesburg
-            and holds a Post Graduate Diploma in Management Accounting from the
-            University of South Africa. She has participated in prestigious
-            leadership programs, enhancing her expertise.
+            Mmalethabo has gained valuable leadership experience by
+            participating in renowned programs, including the IWFSA Middle
+            Management Programme from Duke Corporate Education, the Executive
+            Development Programme from Wits Business School, and Management
+            Consulting from Rhodes Business School.
           </p>
           <p className="text-gray-700 text-lg mb-3">
-              Mmalethabo studied BCom Accounting at the University of
-              Johannesburg and holds a Post Graduate Diploma in Management
-              Accounting from the University of South Africa. To enhance her
-              leadership development, she has participated in prestigious
-              programmes such as the IWFSA Middle Management Programme from Duke
-              Corporate Education, Executive Development Programme from Wits
-              Business School as well as Management Consulting from the Rhodes
-              Business School.
-            </p>
+            She holds a BCom Accounting degree from the University of
+            Johannesburg and a Postgraduate Diploma in Management Accounting
+            from the University of South Africa, further strengthening her
+            expertise in finance and management.
+          </p>
+
           <button
             className="mt-4 bg-black text-white px-5 py-2 rounded-full text-lg transition hover:bg-gray-900"
             onClick={() => setIsModalOpen(true)}
@@ -63,7 +66,7 @@ const ExecutiveSection = () => {
           <Image
             src={executiveImage}
             alt="Executive Image"
-            className="rounded-lg shadow-lg relative"
+            className="rounded-lg shadow-lg relative transition-transform sm:-translate-x-10 w-full h-aut"
           />
         </motion.div>
       </div>
@@ -86,36 +89,37 @@ const ExecutiveSection = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-3">
               More About Our Executive
             </h2>
-          
-            <p className="text-gray-700 text-lg">
-              She is not only the Executive Officer for The Virtual Boardroom SA
-              but she has occupied various positions such as, Production
-              Accountant, Production Analyst, Financial Manager and Provincial
-              Financial Officer. She is also serving in two boards as a
-              Non-Executive Director and Chairperson respectively. 
-            </p>
-            <p className="text-gray-700 text-lg">
-              Mmalethabo gained critical insights when she spent time at the
-              African Immersion in Mauritius, exploring economic landscapes and
-              the role of women in the labour market in Mauritius. She will be
-              joining 200 other young leaders in the 2025 Best Diplomats USA to
-              be held in New Jersey and New York and she is a FortyUnder 40
-              South Africa 2024 finalist
-            </p>
-            <p className="text-gray-700 text-lg">With her passion and advocacy for education and career development, in 2012,
-she co-founded and hosted the first Annual Career and Mentorship Programme
-for high school learners and tertiary students from Middelburg, Hendrina and
-surrounding areas. This programme has been running successfully for over 12
-years, impacting about 200 learners annually funded by the Paul Mthimunye
-Bursary Fund. To date more than 2 500 learners have benefited from the
-programme which offers mentorship, life skills, career guidance and work
-readiness from various industry experts and educational simulation activities.
-</p>
-<p className="text-gray-700 text-lg">
-Her goal is to grow in corporate strategy and will pursue her Masters in Corporate
-Strategy.
 
-</p>
+            <p className="text-gray-700 text-lg">
+              As the Executive Officer of The Virtual Boardroom SA, Mmalethabo
+              has built a diverse career, holding key roles such as Production
+              Accountant, Production Analyst, Financial Manager, and Provincial
+              Financial Officer. She also contributes her expertise as a
+              Non-Executive Director and Chairperson on two boards.
+            </p>
+            <p className="text-gray-700 text-lg">
+              Her leadership journey has been enriched by international
+              exposure, including time spent at the African Immersion in
+              Mauritius, where she explored economic landscapes and the role of
+              women in the labor market. In 2025, she will join 200 young
+              leaders at the Best Diplomats USA conference in New Jersey and New
+              York. She is also a FortyUnder40 South Africa 2024 finalist,
+              recognized for her impact.
+            </p>
+            <p className="text-gray-700 text-lg">
+              Driven by a passion for education and career development,
+              Mmalethabo co-founded the Annual Career and Mentorship Programme
+              in 2012, supporting high school learners and tertiary students
+              from Mpumalanga. Now in its 12th
+              year, the program—funded by the Paul Mthimunye Bursary Fund—has
+              benefited over 2,500 learners, offering mentorship, career
+              guidance, life skills, and work-readiness training from industry
+              professionals.
+            </p>
+            <p className="text-gray-700 text-lg">
+              With aspirations to advance in corporate strategy, she plans to
+              pursue a Master’s degree in the field.
+            </p>
           </motion.div>
         </div>
       )}

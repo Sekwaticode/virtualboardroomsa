@@ -66,17 +66,17 @@ const Testimonials: FC = () => {
   return (
     <section id="testimonials" className="section">
       <h2
-        className="text-4xl md:text-7xl lg:text-8xl flex flex-col overflow-hidden tracking-tighter"
+        className="text-2xl md:text-4xl lg:text-6xl flex flex-col overflow-hidden tracking-tighter"
         ref={titleRef}
       >
         <motion.span className="whitespace-nowrap" style={{ x: transformTop }}>
-          Some Kind Words from Our Valued Clients
+         Some Kind Words From Our Valued Clients
         </motion.span>
         <motion.span
           className="whitespace-nowrap self-end text-stone-500"
           style={{ x: transformBottom }}
         >
-         Some Kind Words from Our Valued Clients
+        Some Kind Words From Our Valued Clients
         </motion.span>
       </h2>
 

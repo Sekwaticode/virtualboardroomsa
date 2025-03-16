@@ -6,42 +6,27 @@ import logo from "@/assets/images/vbsalogo.jpg";
 
 const timelineData = [
   {
-    year: "2018",
     title: "Founder’s Vision",
-    text: "The Corporate Strategy enthusiast, Mmalethabo Mahlangu, started The Virtual Boardroom SA in the quest to solve organisational and professional individuals’ problems.",
+    text: "The Corporate Strategy enthusiast, Mmalethabo Mahlangu, started The Virtual Boardroom SA to solve organizational and professional challenges. With expertise in budgeting and costing, she designed a Personal Finance Budget Pack that has helped individuals restructure their finances and achieve financial stability.",
     position: "left",
   },
   {
-    year: "2019",
-    title: "Expertise in Finance",
-    text: "With her extensive experience in budgeting and costing, she designed a Personal Finance Budget Pack that has helped individuals restructure their finances and provide a roadmap to reach financial stability.",
+    title: "Core Focus & Business Expansion",
+    text: "The Virtual Boardroom SA established its core function, focusing on strategic solutions. Over time, its portfolio expanded to include virtual assistant services, business solutions, management consultancy, and youth development.",
     position: "right",
   },
   {
-    year: "2020",
-    title: "Core Focus",
-    text: "That became the core function of The Virtual Boardroom SA.",
-    position: "left",
-  },
-  {
-    year: "2021",
-    title: "Business Expansion",
-    text: "She has since expanded the portfolio to virtual assistant services, business solutions, management consultancy, and youth development.",
-    position: "right",
-  },
-  {
-    year: "2021",
     title: "Service Availability",
-    text: "The services of The Virtual Boardroom SA are available nationwide virtually and semi in-contact.",
+    text: "The Virtual Boardroom SA offers its services nationwide, both virtually and semi in-contact, ensuring accessibility to businesses and professionals.",
     position: "left",
   },
   {
-    year: "2022",
     title: "Cost-Effective Solutions",
-    text: "This allows companies to take advantage of limiting the cost of human capital.",
+    text: "By leveraging virtual services, businesses can optimize operations while reducing human capital costs, making professional solutions more affordable and efficient.",
     position: "right",
   },
 ];
+
 
 const History = () => {
   const containerRef = useRef(null);
