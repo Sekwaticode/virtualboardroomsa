@@ -96,6 +96,8 @@ const ContactForm = () => {
                   </option>
                   <option value="Mentorship">Mentorship</option>
                   <option value="Events Management">Events Management</option>
+                  <option value="IT Consulting">IT Consulting</option>
+
                 </select>
               </div>
 

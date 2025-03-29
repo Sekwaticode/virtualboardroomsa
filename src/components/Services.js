@@ -71,6 +71,12 @@ const Services = () => {
       title: "Events Management",
       content: ["Corporate Events", "Product Launches", "Fundraising"],
     },
+    {
+      title: "Consulting",
+      content: ["Organizational Analysis and People Centred Transformation", "Cloud computing ", "Business analysis", "IT support and customer support service ", "IT Security and Risk Management", "Technology Advisory"
+
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -107,26 +113,26 @@ const Services = () => {
 
   return (
     <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Our Expert Services</h1>
-            <div className={styles.container} id="services">
-      {boxes.map((box, index) => (
-        <div
-          key={index}
-          ref={(el) => (boxRefs.current[index] = el)}
-          className={`${styles.box} box`}
-        >
-          <div className={styles.content}>
-            <h2 className="text-2xl font-bold mb-2">{box.title}</h2>
-            <ul className="list-disc pl-5">
-              {box.content.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
+      <h1 className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 text-center" > Our Expert Services</h1>
+      <div className={styles.container} id="services">
+        {boxes.map((box, index) => (
+          <div
+            key={index}
+            ref={(el) => (boxRefs.current[index] = el)}
+            className={`${styles.box} box`}
+          >
+            <div className={styles.content}>
+              <h2 className="text-2xl font-bold mb-2">{box.title}</h2>
+              <ul className="list-disc pl-5">
+                {box.content.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <span></span>
           </div>
-          <span></span>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </div>
   );
 };

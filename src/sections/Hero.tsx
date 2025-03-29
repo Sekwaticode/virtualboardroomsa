@@ -70,6 +70,11 @@ const Hero: FC = () => {
               >
                 <Button
                   variant="secondary"
+                  onClick={() =>
+                    document
+                      .getElementById("services")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   iconAfter={
                     <div className="overflow-hidden size-5">
                       <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
@@ -113,7 +118,11 @@ const Hero: FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2.2 }}
               >
-                <Button variant="text">Let&apos;s Talk</Button>
+                <Button variant="text"  onClick={() =>
+                document
+                  .getElementById("contacts")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }>Let&apos;s Talk</Button>
               </motion.div>
             </div>
           </div>
